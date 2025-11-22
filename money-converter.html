@@ -332,9 +332,70 @@
             margin-top: 0.3rem;
         }
 
+        .page-header {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .page-header-logo {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .page-header-content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: #1f2937;
+            margin: 0;
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
         @media (max-width: 768px) {
             .converter-hero h1 {
                 font-size: 1.8rem;
+            }
+
+            .page-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .page-header-logo {
+                height: 50px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
             }
 
             .converter-card {
@@ -363,13 +424,20 @@
 <body>
     <div class="converter-hero">
         <div class="converter-container">
-            <h1>💱 Money Converter Calculator</h1>
+            <h1>Money Converter Calculator</h1>
             <p>Convert currencies in real-time with live exchange rates</p>
         </div>
     </div>
 
     <section class="converter-section">
         <div class="converter-container">
+            <div class="page-header">
+                <img src="https://ik.imagekit.io/6ilngyaqa/1748147908945-Screenshot_2025-05-19_073352_ByK0N71l11.png" alt="Wealth Growers Logo" class="page-header-logo">
+                <div class="page-header-content">
+                    <h1>Wealth Growers</h1>
+                </div>
+            </div>
+
             <div class="converter-card">
                 <div class="error-message" id="error-message"></div>
 
@@ -481,6 +549,9 @@
                         </div>
                     </div>
                 </div>
+                <a href="index.html" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
             </div>
         </div>
     </section>

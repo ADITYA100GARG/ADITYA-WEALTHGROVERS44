@@ -200,6 +200,50 @@
             margin-top: 2rem;
         }
 
+        .page-header {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .page-header-logo {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .page-header-content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: #1f2937;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .page-header-logo {
+                height: 50px;
+            }
+
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .topic-header h1 {
                 font-size: 2rem;
@@ -218,6 +262,13 @@
 <body>
     <div class="topic-page">
         <div class="topic-container">
+            <div class="page-header">
+                <img src="https://ik.imagekit.io/6ilngyaqa/1748147908945-Screenshot_2025-05-19_073352_ByK0N71l11.png" alt="Wealth Growers Logo" class="page-header-logo">
+                <div class="page-header-content">
+                    <h1>Wealth Growers</h1>
+                </div>
+            </div>
+
             <div class="topic-header">
                 <h1>📈 Investment Basics</h1>
                 <p class="intro">Investing helps your money grow over time and beat inflation.</p>
@@ -288,8 +339,8 @@
             </div>
 
             <div class="back-button-container">
-                <a href="index.html#about" class="back-button">
-                    <i class="fas fa-arrow-left"></i> Back to About Page
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Home
                 </a>
             </div>
         </div>
